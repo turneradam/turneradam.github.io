@@ -1,0 +1,229 @@
+:root {
+  --ink: #17181c;
+  --muted: #5b6068;
+  --rule: #d9d9d2;
+  --bg: #fcfcfa;
+  --accent: #3d4f7c;
+
+  --serif: "Iowan Old Style", Charter, Georgia, "Times New Roman", serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --measure: 38rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 1.4rem 5rem;
+  background: var(--bg);
+  color: var(--ink);
+  font: 1.0625rem/1.65 var(--serif);
+  font-synthesis-weight: none;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; }
+
+/* Header and navigation */
+
+header {
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.6rem;
+  padding: 2rem 0 1rem;
+}
+
+.sitename {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.sitename span {
+  display: block;
+  font: 400 0.78rem/1.5 var(--mono);
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+nav { margin-top: 1.1rem; }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.3rem;
+}
+
+nav a {
+  font: 400 0.85rem/2 var(--mono);
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+nav a:hover,
+nav a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+
+nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* Typography */
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.2rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 2.8rem 0 0.7rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.8rem 0 0.35rem;
+}
+
+p { margin: 0 0 1.05rem; }
+
+.lede { font-size: 1.15rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+a:hover { color: var(--ink); }
+
+/* Metadata: dates, roles, identifiers */
+
+.meta {
+  font: 400 0.82rem/1.6 var(--mono);
+  color: var(--muted);
+}
+
+/* Lists */
+
+ul.plain { list-style: none; margin: 0; padding: 0; }
+
+ul.plain > li { margin-bottom: 1.15rem; }
+
+ul.bullets { padding-left: 1.1rem; margin: 0 0 1.05rem; }
+
+ul.bullets li { margin-bottom: 0.35rem; }
+
+/* Reference entries */
+
+ol.refs {
+  list-style: none;
+  counter-reset: ref;
+  margin: 0;
+  padding: 0;
+}
+
+ol.refs > li {
+  counter-increment: ref;
+  position: relative;
+  padding-left: 2.2rem;
+  margin-bottom: 1.15rem;
+}
+
+ol.refs > li::before {
+  content: counter(ref);
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  font: 400 0.8rem/1 var(--mono);
+  color: var(--muted);
+}
+
+.authors { font-variant-numeric: oldstyle-nums; }
+
+.self { font-weight: 600; }
+
+.venue { font-style: italic; }
+
+/* Project and people blocks */
+
+.entry {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.1rem;
+  margin-top: 1.6rem;
+}
+
+.entry h3 { margin-top: 0; }
+
+.entry p:last-child { margin-bottom: 0; }
+
+/* Tables */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.4rem;
+  font-size: 0.95rem;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem 0.7rem 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+th {
+  font: 600 0.78rem/1.5 var(--mono);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+td.meta { white-space: nowrap; }
+
+/* Footer */
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding-top: 1.2rem;
+  font: 400 0.82rem/1.7 var(--mono);
+  color: var(--muted);
+}
+
+footer a { color: var(--muted); }
+
+footer a:hover { color: var(--accent); }
+
+.contact-links { display: flex; flex-wrap: wrap; gap: 0 1.2rem; }
+
+/* Accessibility */
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.skip { position: absolute; left: -9999px; }
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--bg);
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--accent);
+  z-index: 10;
+}
+
+@media (max-width: 34rem) {
+  body { font-size: 1rem; }
+  h1 { font-size: 1.5rem; }
+  table { font-size: 0.9rem; }
+  td.meta { white-space: normal; }
+}

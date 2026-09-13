@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research &middot; Adam H. Turner</title>
+<meta name="description" content="Research on ionic liquids and deep eutectic solvents, hydrogen generation from gallium-aluminium composites, and MOF screening for hydrogen storage.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://adamhturner.com/research.html">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="wrap">
+
+<header>
+  <a class="sitename" href="index.html">Adam H. Turner
+    <span>Associate Professor of Chemistry &middot; Ateneo de Manila University</span>
+  </a>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html" aria-current="page">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="group.html">Group</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<h1>Research</h1>
+
+<p class="lede">Two programmes. One asks what liquid-state structure determines and what it only correlates with. The other asks how to get hydrogen out of a metal or into a pore.</p>
+
+<h2>Ionic liquids and deep eutectic solvents</h2>
+
+<section class="entry">
+  <h3>Structure from neutron total scattering</h3>
+  <p class="meta">SANDALS and NIMROD &middot; Gudrun &middot; EPSR</p>
+  <p>Ten co-proposed experiments at ISIS underpin this thread, covering proposal writing, overnight collection, data reduction and EPSR structural refinement. Published outcomes include the hydrogen-bonding network in choline chloride / glycerol mixtures and the mechanism by which ionic liquids pull phenol out of model oils, where the structural picture explains an extraction efficiency that bulk measurements alone leave unaccounted for.</p>
+  <p>Contrast variation requires deuterated analogues of the species under study, so the isotopomers are prepared alongside the protiated samples rather than bought in.</p>
+</section>
+
+<section class="entry">
+  <h3>Solvatochromic and kinetic mapping</h3>
+  <p class="meta">RSC Research Fund 2026 &middot; with UNSW Sydney</p>
+  <p>Kamlet&ndash;Taft polarity descriptors measured across a systematic eutectic library, tied to reaction kinetics through the Menschutkin reaction as a benchmark. The intent is to establish which solvent descriptors actually predict rate and selectivity in these mixtures, and which are inherited from ionic liquid work without ever having been tested in a eutectic. Run with Jason Harper at UNSW Sydney.</p>
+  <p>Water content is the controlling nuisance variable throughout, so a substantial part of the work is quality control on the samples before any measurement counts.</p>
+</section>
+
+<section class="entry">
+  <h3>Force-field transferability tested against neutron data</h3>
+  <p class="meta">Classical molecular dynamics &middot; LAMMPS</p>
+  <p>Charge scaling is routine in eutectic simulation and is almost always applied uniformly to every species in the box. Testing three schemes for choline chloride / glycerol against our own neutron and EPSR reference data shows that uniform scaling degrades the hydrogen-bond network in a diagnosable way, and that the hydrogen-bond donor should not be scaled at all. The advantage of leaving glycerol at full charge grows with chloride content, which points to chloride sequestration as the mechanism.</p>
+  <p>A percolation metric in common use for judging these models turns out not to discriminate between them, which is worth reporting on its own.</p>
+</section>
+
+<section class="entry">
+  <h3>Solvation dynamics and vibrational correlation</h3>
+  <p class="meta">TCSPC &middot; FTIR with two-dimensional correlation analysis</p>
+  <p>Rotational and translational dynamics of probe molecules in eutectics, measured by time-correlated single photon counting, alongside two-dimensional correlation analysis of vibrational spectra to sequence how hydrogen-bond populations respond as water is added. The two techniques answer different halves of the same question, and a combined treatment of both datasets is in preparation.</p>
+</section>
+
+<h2>Hydrogen generation and storage</h2>
+
+<section class="entry">
+  <h3>H2Next: gallium-aluminium composites</h3>
+  <p class="meta">Patent filed &middot; Quantum ESPRESSO</p>
+  <p>Composites prepared by mechanical mixing under ambient conditions release 80 to 100 millilitres of hydrogen per gram within five minutes of contact with water. Gallium disrupts the passivating oxide and lets water reach the metal underneath. A patent has been filed on the preparation.</p>
+  <p>The obvious explanation was that gallium activates water at the surface. Plane-wave DFT on the alpha-alumina (0001) surface says otherwise. Across aluminium, gallium and indium sites, gallium is the <em>weakest</em> water binder in both molecular and dissociative modes, while indium is the strongest. The trend is non-monotonic in cation size, which rules out a purely geometric account and points at an electronic origin. Gallium attenuates the hydroxylation channel rather than opening it, so the disruption of passivation has to be carrying the effect.</p>
+</section>
+
+<section class="entry">
+  <h3>Screening porous frameworks for hydrogen storage</h3>
+  <p class="meta">RASPA &middot; Zeo++ &middot; conformal prediction</p>
+  <p>A grand canonical Monte Carlo campaign across 12,986 CoRE MOF frameworks with Feynman&ndash;Hibbs quantum corrections, accelerated by machine learning with conformal prediction for calibrated uncertainty on the surrogate. Extended from hydrogen to carbon dioxide with electrostatics and machine-learned partial charges.</p>
+  <p>One methodological result generalises well past this dataset: the minimum-image convention can fail on an individual cell axis while the box as a whole looks acceptable, and widely used simulation codes truncate quietly rather than raising an error when it does. An open-source screening package is in development.</p>
+</section>
+
+<h2>Other work</h2>
+
+<section class="entry">
+  <h3>Bioceramics and nanomaterials from biogenic waste</h3>
+  <p class="meta">DOST-funded &middot; co-investigator</p>
+  <p>Nano-hydroxyapatite recovered from agricultural and aquaculture waste, matched against synthetic standards by XRD, FTIR and SEM-EDX, then taken into 3D-printed scaffolds. Machine learning predicts the printability of ceramic pastes so that formulation search does not have to be exhaustive. A parallel programme applies the same materials to water sensing.</p>
+</section>
+
+<section class="entry">
+  <h3>Plant-derived corrosion inhibitors</h3>
+  <p class="meta">Electrochemistry &middot; ORCA &middot; reactive MD</p>
+  <p>Extracts from <em>Xanthosoma sagittifolium</em> as green inhibitors for mild steel, taken through bioassay-guided fractionation to identify which components carry the activity, with molecular descriptors from ORCA and interfacial displacement studied by reactive molecular dynamics. A comparative life-cycle assessment runs against conventional imidazoline inhibitors. A second thread takes the flavonoid fraction into a waterborne acrylic-epoxy coating for marine service.</p>
+</section>
+
+<h2>Funding</h2>
+
+<p>Seven competitive grants since 2019, totalling around &pound;480,000. Philippine national funding through DOST and CHED requires a Filipino national as principal investigator, so my role on nationally funded programmes is co-investigator by statute rather than by seniority. I hold principal investigator roles on the university and Royal Society of Chemistry awards.</p>
+
+<table>
+  <thead>
+    <tr><th scope="col">Years</th><th scope="col">Award</th><th scope="col">Role</th><th scope="col">Value</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="meta">2026</td><td>RSC Research Fund &mdash; solvatochromic and kinetic framework for eutectics</td><td>PI</td><td>&pound;4,970</td></tr>
+    <tr><td class="meta">2025&ndash;28</td><td>DOST-PCIEERD &mdash; AI-assisted design and water sensing with biowaste nanomaterials</td><td>Co-I</td><td>PHP 20.9M</td></tr>
+    <tr><td class="meta">2024&ndash;26</td><td>Ateneo URC Big Grant &mdash; H2Next hydrogen generation and storage</td><td>PI</td><td>PHP 1.44M</td></tr>
+    <tr><td class="meta">2023</td><td>Ateneo URC Small Grant &mdash; 2D correlation spectroscopy of eutectics</td><td>PI</td><td>PHP 610K</td></tr>
+    <tr><td class="meta">2023</td><td>Ateneo URC Big Grant &mdash; bioceramic scaffolds</td><td>Co-I</td><td>PHP 983K</td></tr>
+    <tr><td class="meta">2022&ndash;28</td><td>DOST-PCHRD &mdash; 3D-printed bioceramic scaffolds from biogenic waste, parts 1 and 2</td><td>Co-I</td><td>PHP 9.3M, 6.2M</td></tr>
+  </tbody>
+</table>
+
+<p>Separately, ten co-proposed neutron beamtimes at ISIS between 2012 and 2016 represent a substantial in-kind allocation at STFC's published instrument-day rates.</p>
+
+<h2>Software</h2>
+
+<p>Four Python packages are in development and will be released under open licences with accompanying software papers.</p>
+
+<table>
+  <thead>
+    <tr><th scope="col">Package</th><th scope="col">Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>crosspeak</td><td>Two-dimensional correlation spectroscopy</td></tr>
+    <tr><td>solvatochrome</td><td>Time-resolved fluorescence and solvation dynamics</td></tr>
+    <tr><td>wetmetal</td><td>Multi-engine analysis of water&ndash;metal interfaces</td></tr>
+    <tr><td>farhand</td><td>Orchestration for long-running simulation campaigns</td></tr>
+  </tbody>
+</table>
+
+</main>
+
+<footer>
+  <div class="contact-links">
+    <a href="https://orcid.org/0000-0002-0579-7982">ORCID</a>
+    <a href="https://github.com/turneradam">GitHub</a>
+    <a href="https://www.linkedin.com/in/adamhturner">LinkedIn</a>
+  </div>
+  <p>Last updated September 2026.</p>
+</footer>
+
+</div>
+</body>
+</html>
